@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Untitled Document</title>
+	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Play"rel="stylesheet">
+<script>
+	function vali() {
+		var u=document.forms["f1"]["username"].value;
+		var p=document.forms["f1"]["password"].value;
+         if(u=='user' && p=='pwd')
+         {
+         	window.location="congo.html";
+         	return false;
+         }
+         else
+         {
+         	alert("Wrong Username or Password");
+         	return false;
+         }
+			}
+</script>
+</head>
+<body>
+
+<div class="signin">
+	<form name="f1" method="post" onsubmit="return vali();" action="congo.html">
+		<h2 style="color: white">Log In</h2>
+		<input type="text" name="username" placeholder="Username" required />
+		<input type="password" name="password" placeholder="Password" required />
+		<br><br>
+		<a href="congo.html"><input type="button" value="Log In" onclick="return vali()"></a><br>
+		<br>
+		<div id="container">
+		<a href="re.html" style="margin-left:0px: font-size:13px; font-family:Tahoma, Geneva, sans-serif;">Reset password?</a>
+        <a href="for.html" style="margin-left:30px: font-size:13px; font-family:Tahoma, Geneva, sans-serif;">Forgot password</a>  
+    </div><br /><br /><br /><br /><br /><br />
+    Don't have account?<a href="signup.html" style="font-family:'Play',sans-serif;">&nbsp;Sign Up</a>
+	</form>
+</div>
+</body>
+</html>
